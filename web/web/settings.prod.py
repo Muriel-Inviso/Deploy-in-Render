@@ -14,7 +14,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 DATABASES = {
     'default': dj_database_url.config(
-        #N'hésitez pas à modifier cette valeur en fonction de vos besoins.
+        # N'hésitez pas à modifier cette valeur en fonction de vos besoins.
         default='postgresql://postgres:postgres@localhost:5432/mysite',
         conn_max_age=600
     )
@@ -25,7 +25,7 @@ STATIC_URL = '/static/'
 # Ce paramètre indique à Django à quelle URL les fichiers statiques seront servis à l'utilisateur.
 # Ici, ils seront bien accessibles sur votre-domaine.onrender.com/static/...
 
-if not DEBUG: 
+if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Dites à Django de copier les statiques dans le répertoire `staticfiles`
     # dans votre répertoire d'application sur Render.
