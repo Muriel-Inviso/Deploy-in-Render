@@ -3,8 +3,6 @@
 #exit on error
 set -o errexit
 
-pip freeze
-
 poetry install
 poetry self update
 rm poetry.lock
