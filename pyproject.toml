@@ -6,7 +6,7 @@ authors = ["muriel.raharison <muriel.raharison@inviso-group.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8.2"
+python = "3.8.2"
 django = "^4.2"
 dj-database-url = "^2.0.0"
 psycopg2-binary = "^2.9.6"
