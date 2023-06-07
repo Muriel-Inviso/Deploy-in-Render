@@ -1,7 +1,9 @@
 databases:
-  - name: web
-    databaseName: web
-    user: web
+  - name: dpg-ci07lgj3cv20nhscapc0-a
+    databaseName: web_25oz
+    user: itdevsuccess
+    port: 5432
+    password: 9hhbXch99Elsl9Db42p7yDV90WT8ClYL
   
 services:
   - type: web # On ne change pas ceci, ceci reste 'web'
