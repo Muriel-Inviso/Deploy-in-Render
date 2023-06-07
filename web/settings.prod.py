@@ -15,7 +15,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 DATABASES = {
     'default': dj_database_url.config(
         # N'hésitez pas à modifier cette valeur en fonction de vos besoins.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgres://itdevsuccess:9hhbXch99Elsl9Db42p7yDV90WT8ClYL@dpg-ci07lgj3cv20nhscapc0-a/web_25oz',
         conn_max_age=600
     )
 }

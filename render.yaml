@@ -7,7 +7,7 @@ databases:
   
 services:
   - type: web # On ne change pas ceci, ceci reste 'web'
-    name: web
+    name: web_deploy
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn web.wsgi:application"
