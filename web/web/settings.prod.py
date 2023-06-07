@@ -1,4 +1,3 @@
-import os
 import dj_database_url
 from .settings import *
 
@@ -20,3 +19,17 @@ DATABASES = {
         conn_max_age=600
     )
 }
+
+STATIC_URL = '/static/'
+
+# Ce paramètre indique à Django à quelle URL les fichiers statiques seront servis à l'utilisateur.
+# Ici, ils seront bien accessibles sur votre-domaine.onrender.com/static/...
+
+if not DEBUG: 
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Dites à Django de copier les statiques dans le répertoire `staticfiles`
+    # dans votre répertoire d'application sur Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Activez le backend de stockage WhiteNoise qui prend en charge la compression des fichiers statiques
+    # et en créant des noms uniques pour chaque version afin qu'ils puissent être mis en cache en toute sécurité pour toujours.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
