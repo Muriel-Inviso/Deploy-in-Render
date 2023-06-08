@@ -29,6 +29,8 @@ STATIC_URL = '/static/'
 # Ici, ils seront bien accessibles sur votre-domaine.onrender.com/static/...
 
 if not DEBUG:
+    print(f"not DEBUG: {DEBUG}")
+
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Dites à Django de copier les statiques dans le répertoire `staticfiles`
     # dans votre répertoire d'application sur Render.
@@ -37,4 +39,4 @@ if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 else: 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    print(f"DEBUG: {DEBUG}")
