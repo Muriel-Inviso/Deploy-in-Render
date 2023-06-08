@@ -1,4 +1,5 @@
 import dj_database_url
+import os
 from .settings import *
 
 SECRET_KEY = os.environ.get(
@@ -32,3 +33,6 @@ if not DEBUG:
     # Activez le backend de stockage WhiteNoise qui prend en charge la compression des fichiers statiques
     # et en créant des noms uniques pour chaque version afin qu'ils puissent être mis en cache en toute sécurité pour toujours.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+else: 
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
