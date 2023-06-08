@@ -4,7 +4,8 @@ from .settings import *
 
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', default='1ef68649e6429d5074d7138346477ef2')
-DEBUG = 'RENDER' not in os.environ
+# DEBUG = 'RENDER' not in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = ['web-deploy-41de.onrender.com']
 
