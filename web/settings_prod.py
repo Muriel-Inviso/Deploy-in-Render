@@ -31,14 +31,14 @@ STATIC_URL = '/static/'
 if not DEBUG:
     print(f"not DEBUG: {DEBUG}")
 
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Dites à Django de copier les statiques dans le répertoire `staticfiles`
     # dans votre répertoire d'application sur Render.
     # Activez le backend de stockage WhiteNoise qui prend en charge la compression des fichiers statiques
     # et en créant des noms uniques pour chaque version afin qu'ils puissent être mis en cache en toute sécurité pour toujours.
     
 
-    STATIC_ROOT = BASE_DIR / "staticfiles"
+    # STATIC_ROOT = BASE_DIR / "staticfiles"
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
