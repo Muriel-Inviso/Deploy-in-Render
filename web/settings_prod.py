@@ -4,7 +4,7 @@ from .settings import *
 
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', default='1ef68649e6429d5074d7138346477ef2')
-DEBUG = 'RENDER' in os.environ
+DEBUG = 'RENDER' not in os.environ
 
 print(DEBUG)
 
